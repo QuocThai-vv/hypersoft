@@ -60,8 +60,10 @@ function AppContent() {
 }
 
 export default function App() {
+  const basename = import.meta.env.BASE_URL.replace(/\/$/, "") || undefined;
+
   return (
-    <Router>
+    <Router basename={basename}>
       <AppContent />
     </Router>
   );
