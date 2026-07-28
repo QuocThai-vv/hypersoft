@@ -1,0 +1,104 @@
+Wireframe Giao Diện Khách Hàng (Figma Style)
+Tôi sẽ mô tả chi tiết các screen chính:
+
+1. Landing Page / Trang Chủ
+Header: Logo, navigation (Trang chủ, Dịch vụ, Portfolio, Book lịch, Đăng nhập)
+Hero Section: Hình ảnh salon chất lượng cao, tagline "Biến đổi phong cách của bạn"
+Dịch vụ nổi bật: Grid 3-4 dịch vụ chính với hình ảnh
+Portfolio preview: Carousel hình ảnh mẫu tóc thành công
+Starlist nổi bật: Giới thiệu stylist top với đánh giá
+Testimonials: Đánh giá từ khách hàng
+Footer: Thông tin salon, social media, newsletter signup
+2. Trang Dịch Vụ
+Filter sidebar: Lọc theo loại (Cắt, Nhuộm, Uốn...), giá, thời gian
+Service cards: Mỗi card có hình ảnh, tên dịch vụ, mô tả ngắn, thời gian, giá, CTA "Book ngay"
+Service detail modal: Click vào card hiện chi tiết đầy đủ
+Recommended services: Gợi ý dịch vụ thường đặt cùng
+3. Trang Portfolio/Gallery
+Category tabs: Kiểu tóc nam/nữ, theo độ dài, màu sắc
+Masonry grid: Hình ảnh mẫu tóc với tag kiểu tóc, stylist
+Filter by stylist: Lọc theo stylist thực hiện
+Save to favorites: Chức năng lưu hình yêu thích
+4. Booking Flow (3 bước)
+Bước 1: Chọn dịch vụ
+Danh sách dịch vụ có checkbox chọn
+Có thể chọn nhiều dịch vụ cùng lúc (ví dụ: Cắt + Gội)
+Hiển thị tổng thời gian & giá ước tính
+CTA "Tiếp tục"
+Bước 2: Chọn stylist & thời gian
+Stylist selection: Danh sách stylist với avatar, rating, chuyên môn, lịch trống
+Calendar view: Lịch tháng với slot trống/đã book
+Time slots: Grid giờ trống theo ngày đã chọn
+Hiển thị thông tin stylist được chọn
+CTA "Tiếp tục"
+Bước 3: Thông tin & xác nhận
+Form điền thông tin: Họ tên, số điện thoại, email (đã tự động nếu đăng nhập)
+Special requests: Textarea cho yêu cầu đặc biệt
+Tổng kết: Dịch vụ, stylist, thời gian, tổng tiền
+Payment option: Thanh toán online hoặc tại salon
+CTA "Xác nhận đặt lịch"
+5. Trang Đăng nhập/Đăng ký
+Tabs: Đăng nhập / Đăng ký
+Social login: Google, Facebook
+Form đăng ký: Email, mật khẩu, xác nhận mật khẩu, số điện thoại
+Forgot password link
+Terms & conditions checkbox
+6. User Dashboard (sau khi đăng nhập)
+Tab: Lịch hẹn
+Upcoming appointments: Card hiển thị lịch sắp tới với thông tin chi tiết
+Past appointments: Lịch sử đã hoàn thành
+Action buttons: Hủy lịch, Reschedule, Chat với salon
+Tab: Thông tin cá nhân
+Avatar upload
+Form chỉnh sửa thông tin
+Đổi mật khẩu
+Notification preferences
+Tab: Yêu thích
+Danh sách kiểu tóc đã lưu
+Danh sách stylist yêu thích
+Tab: Đánh giá của tôi
+Lịch sử đánh giá đã gửi
+Form để đánh giá dịch vụ mới
+7. Confirmation & Thank You Page
+Icon thành công lớn
+Mã booking/QR code
+Thông tin lịch hẹn chi tiết
+Button "Add to calendar" (Google/Apple Calendar)
+Button "Share với bạn bè"
+Hướng dẫn đến salon (map nhỏ)
+8. Mobile Responsive Design
+Mobile Navigation:
+Hamburger menu
+Bottom navigation (Home, Services, Book, Profile)
+Mobile Booking Flow:
+Full-screen modals cho từng bước
+Swipeable carousel cho dịch vụ
+Time picker native cho mobile
+9. Visual Design System
+Color Palette:
+Primary: Deep Purple/Navy (#4A3AFF) - chuyên nghiệp, sang trọng
+Secondary: Soft Pink/Gold (#FF9A8B) - ấm áp, thân thiện
+Accent: Teal (#2DD4BF) - nổi bật cho CTA
+Neutrals: White, Light Gray (#F8FAFC), Dark Gray (#1E293B)
+Typography:
+Headings: Inter/SF Pro Display - Bold, Modern
+Body: Inter/SF Pro Text - Readable
+Sizes: Hierarchical (H1: 32px, H2: 24px, Body: 16px)
+Components:
+Buttons: Rounded corners, consistent hover states
+Cards: Shadow, rounded corners, clean layout
+Forms: Clear labels, helpful validation
+Navigation: Sticky header, clear active states
+10. Interactive States & Micro-interactions
+Hover States:
+Service cards: Scale up slightly, shadow deeper
+Buttons: Color change, icon animation
+Navigation items: Underline animation
+Loading States:
+Skeleton screens khi load data
+Spinner cho form submission
+Progress bar cho booking flow
+Success/Error States:
+Toast notifications cho actions
+Form validation với real-time feedback
+Confirmation animations

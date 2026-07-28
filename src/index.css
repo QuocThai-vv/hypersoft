@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: "Inter", "SF Pro Display", "Manrope", system-ui, -apple-system, sans-serif;
+  line-height: 1.55;
+  font-weight: 400;
+  color-scheme: dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  background-color: #0E0E10;
+  color: #fff;
+}
+
+#root {
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+@layer base {
+  body {
+    @apply text-text-primary antialiased;
+    background-color: #0E0E10;
+  }
+  body::selection {
+    background-color: rgba(217,119,6,0.25);
+    color: #F4B860;
+  }
+  h1, h2, h3, h4, h5 {
+    font-family: "Manrope", "SF Pro Display", "Inter", system-ui, sans-serif;
+    letter-spacing: -0.02em;
+    color: #FFFFFF;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/[0.04] backdrop-blur-xl border border-white/[0.07];
+  }
+  .glass-strong {
+    @apply bg-white/[0.06] backdrop-blur-2xl border border-white/[0.08];
+  }
+  .glass-card {
+    @apply bg-gradient-to-b from-white/[0.055] to-white/[0.02] border border-white/[0.06] backdrop-blur-xl shadow-card;
+  }
+  .text-gradient-luxury {
+    @apply bg-gradient-to-r from-accent-gold via-amber-300 to-accent-burnt bg-clip-text text-transparent;
+  }
+  .hairline {
+    @apply border-white/[0.07];
+  }
+  .chip {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-white/10 bg-white/[0.03] text-xs text-text-secondary;
+  }
+  .chip-accent {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-accent/30 bg-accent/15 text-accent-gold text-xs font-medium;
+  }
+  .skeleton {
+    background: linear-gradient(90deg, rgba(255,255,255,0.035) 0px, rgba(255,255,255,0.07) 40%, rgba(255,255,255,0.035) 80%);
+    background-size: 800px 100%;
+    animation: shimmer 2.5s linear infinite;
+  }
+  .btn-ripple {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+  }
+  .btn-ripple::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at var(--rx,50%) rgba(244,184,96,0.18), transparent 60%);
+    opacity: 0;
+    transition: opacity .5s;
+    pointer-events: none;
+  }
+  .btn-ripple:hover::after { opacity: 1; }
+  .luxury-input {
+    @apply w-full bg-white/[0.04] border border-white/10 rounded-2xl px-4 py-3.5 text-sm md:text-base text-text-primary placeholder:text-text-muted/70 outline-none transition-all focus:border-accent/50 focus:bg-white/[0.06] focus:shadow-glow focus:ring-1 focus:ring-accent/20;
+  }
+  .scroll-shadow {
+    mask-image: linear-gradient(to right, transparent, #000 24px, #000 calc(100% - 24px), transparent);
+  }
+  .shimmer-luxury {
+    background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.35) 50%, transparent 100%);
+    background-size: 200% 100%;
+    animation: shimmer-x 2.2s ease-in-out infinite;
+  }
+  @keyframes shimmer-x {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+  .noise::before, .noise {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+    mix-blend-mode: overlay;
+    opacity: .55;
+  }
+}
+
+@layer utilities {
+  .pb-safe {
+    padding-bottom: calc(env(safe-area-inset-bottom, 0) + 5.5rem);
+  }
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+  .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+  .mask-fade-b {
+    mask-image: linear-gradient(to bottom, #000 60%, transparent);
+  }
+  .bg-radial-accent {
+    background: radial-gradient(1200px 500px at 80% -10%, rgba(217,119,6,0.18), transparent 60%),
+               radial-gradient(900px 500px at -10% 10%, rgba(244,184,96,0.12), transparent 60%);
+  }
+}
